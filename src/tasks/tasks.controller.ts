@@ -20,6 +20,11 @@ export class TasksController {
   constructor(private tasksService: TasksService) {}
 
   // localhost:3000/tasks
+
+  @Get()
+  getTasks(@Query() filterDto: GetTasksFilterDto): Promise<Task[]> {
+    return this.tasksService.getTasks(filterDto);
+  }
   // @Get()
   // getTasks(@Query() filterDto: GetTasksFilterDto): Task[] {
   //   // if we have any filter defined then call taskService.getTasksWithFilter

@@ -17,6 +17,11 @@ export class TasksService {
   // getAllTasks(): Task[] {
   //   return this.tasks;
   // }
+
+  getTasks(filterDto: GetTasksFilterDto): Promise<Task[]> {
+    //
+  }
+
   // getTasksWithFilter(filterDto: GetTasksFilterDto): Task[] {
   //   const { status, search } = filterDto;
   //   //define a temporary array to hold the values
